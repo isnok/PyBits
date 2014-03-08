@@ -5,7 +5,8 @@ SpeedTest = namedtuple("SpeedTest", ["title", "setup", "code"])
 tests = [
 SpeedTest("access 1-elem dict", "a={1:'x'}", "a[1]"),
 SpeedTest("get from empty dict", "a={}", "x=a.get(1,'x')"),
-SpeedTest("get from 1-elem dict", "a={1:'x'}", "x=a.get(1,'x')"),
+SpeedTest("get from 1-elem dict (there)", "a={1:'x'}", "x=a.get(1,'x')"),
+SpeedTest("get from 1-elem dict (not there)", "a={1:'x'}", "x=a.get(1,'x')"),
 SpeedTest("if-then-else-get (in dict)",
 "a={1: 'x'}",
 """
