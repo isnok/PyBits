@@ -26,7 +26,9 @@ elif not args['--run']:
 
 from collections import namedtuple
 
-from dict_times import tests
+from dict_times import dict_tests
+from if_times import if_tests
+tests = dict_tests + if_tests
 
 if args['--list']:
     for i, test in enumerate(tests):
